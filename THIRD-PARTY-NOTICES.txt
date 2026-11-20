@@ -1,0 +1,78 @@
+================================================================================
+VEPF — THIRD-PARTY SOFTWARE NOTICES AND LICENSES
+================================================================================
+
+VePF incorporates or dynamically links against the following third-party
+open-source software components. Each component is governed by its respective
+license terms set forth below.
+
+--------------------------------------------------------------------------------
+1. .NET Runtime & Windows Presentation Foundation (WPF) Reference Components
+--------------------------------------------------------------------------------
+Component: .NET / WPF Managed Assemblies & API Definitions
+Website:   https://github.com/dotnet/wpf and https://github.com/dotnet/runtime
+Copyright: Copyright (c) .NET Foundation and Contributors
+License:   MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+--------------------------------------------------------------------------------
+2. Dynamically Linked Linux System Libraries
+--------------------------------------------------------------------------------
+The VePF native runtime (libmilcorez.so) dynamically links at runtime against
+standard system libraries installed on the host Linux distribution via
+install-deps.sh. These libraries are not statically bundled inside VePF and
+remain licensed under their respective upstream open-source licenses:
+
+  * libvips (Image Processing Library)
+    Website: https://www.libvips.org
+    License: GNU Lesser General Public License v2.1 or later (LGPL-2.1-or-later)
+
+  * GStreamer & gst-plugins-base (Multimedia Framework)
+    Website: https://gstreamer.freedesktop.org
+    License: GNU Lesser General Public License v2.1 or later (LGPL-2.1-or-later)
+
+  * ImageMagick (vips-magick format delegate for .ico / .bmp decoding)
+    Website: https://imagemagick.org
+    License: ImageMagick License (Apache-2.0 compatible)
+
+  * Vulkan Loader (libvulkan) & Mesa 3D / Lavapipe (llvmpipe)
+    Website: https://www.khronos.org/vulkan / https://www.mesa3d.org
+    License: Apache-2.0 / MIT License
+
+  * libxkbcommon, libX11, and Wayland Client Libraries
+    Website: https://xkbcommon.org / https://wayland.freedesktop.org
+    License: MIT License
+
+--------------------------------------------------------------------------------
+3. GNU Lesser General Public License (LGPL) v2.1 Compliance Notice
+--------------------------------------------------------------------------------
+In accordance with the GNU Lesser General Public License, Version 2.1
+(LGPL-2.1), dynamically linked libraries such as libvips and GStreamer are
+loaded via standard OS dynamic linking (ld.so / dlopen), allowing end users
+and developers to upgrade, replace, or relink those system libraries on the
+target Linux host independently of VePF.
+
+Full text of the GNU Lesser General Public License v2.1 is available on most
+Linux systems at /usr/share/common-licenses/LGPL-2.1 or online at:
+https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+
+================================================================================
+End of Third-Party Notices
+================================================================================

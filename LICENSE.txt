@@ -1,0 +1,120 @@
+VEPF END USER LICENSE AGREEMENT (EULA)
+Version 1.1 — Effective Date: November 2026
+Website: https://www.vepf.net
+
+PLEASE READ THIS END USER LICENSE AGREEMENT ("AGREEMENT") CAREFULLY BEFORE
+INSTALLING, COPYING, OR USING THE VEPF SOFTWARE. BY INSTALLING OR USING THE
+SOFTWARE, YOU AGREE TO BE BOUND BY THE TERMS OF THIS AGREEMENT.
+
+1. DEFINITIONS
+   1.1 "Software" means the VePF native and managed runtime libraries, desktop
+       assemblies, installation scripts, licensing utilities, and accompanying
+       documentation provided by VePF ("Licensor").
+   1.2 "Runtime Redistributables" means the compiled VePF runtime binaries and
+       assemblies required to execute an application built with VePF, excluding
+       development scripts, SDK utilities, and licensing tools.
+   1.3 "Machine License" means the machine-specific cryptographic license
+       credential issued by Licensor via https://www.vepf.net and bound to a
+       single machine's hardware fingerprint.
+   1.4 "Licensed Machine" means a single physical or virtual computer system
+       identified by its unique machine fingerprint for which a valid Machine
+       License has been issued and applied.
+   1.5 "Personal Use" means non-commercial development, education, academic
+       research, evaluation, or hobbyist projects by an individual where the
+       resulting software is not sold, licensed for a fee, or used to generate
+       direct or indirect commercial revenue.
+   1.6 "Commercial Use" means any use of the Software by a business, for-profit
+       organization, government entity, or individual in connection with
+       commercial products, paid services, or internal business operations.
+
+2. EVALUATION MODE (UNLICENSED MACHINES)
+   On any machine without a valid Machine License, the Software operates in
+   Evaluation Mode, during which application sessions are subject to runtime
+   session time limits. Evaluation Mode is granted strictly for internal
+   testing and evaluation. Unlicensed machines may not be used for production
+   or uninterrupted end-user deployment.
+
+3. PER-MACHINE LICENSE GRANTS
+   3.1 Per-Machine Requirement: Licenses are granted strictly on a per-machine
+       basis. Every physical or virtual machine that executes the Software or
+       Runtime Redistributables—including development machines, build servers,
+       and end-user deployment machines—must be activated with its own valid
+       Machine License bound to that machine's unique fingerprint.
+   3.2 Personal License Grant: Subject to your compliance with this Agreement
+       and activation with a valid Personal Machine License, Licensor grants you
+       a non-exclusive, non-transferable, perpetual license to install and use
+       the Software on the corresponding Licensed Machine strictly for Personal
+       Use.
+   3.3 Commercial License Grant: Subject to your compliance with this Agreement
+       and acquisition of a valid Commercial Machine License for each applicable
+       machine, Licensor grants you a non-exclusive, non-transferable license to:
+       (a) install and use the Software on Licensed Machines to develop, test,
+           and build software applications ("Licensed Applications"); and
+       (b) reproduce and distribute the Runtime Redistributables solely as an
+           integrated component of your compiled Licensed Applications for
+           execution on Licensed Machines, provided that each end-user or
+           deployment machine running the Licensed Application is activated with
+           a valid Commercial Machine License.
+   3.4 Early Adopter Commercial Grant: Any Commercial Machine License validly
+       acquired through https://www.vepf.net prior to March 1, 2027, is granted
+       free of charge for its designated Licensed Machine in accordance with its
+       issued license parameters.
+   3.5 Non-Transferability Across Machines: A Machine License is bound to a
+       single machine fingerprint and may not be shared, cloned, or used
+       concurrently across multiple physical or virtual machines.
+
+4. DISTRIBUTION REQUIREMENTS
+   When distributing Licensed Applications that bundle Runtime Redistributables,
+   you must:
+   (a) distribute the Runtime Redistributables solely as an integrated part of
+       your Licensed Application and not as a standalone UI framework, SDK, or
+       development toolkit;
+   (b) ensure that each target or end-user machine executing the Licensed
+       Application holds a valid Machine License (or clearly notify end users
+       prior to installation that a Machine License from Licensor is required);
+   (c) include all applicable third-party open-source notices with your
+       distribution; and
+   (d) refrain from using the "VePF" name, logo, or trademarks to endorse or
+       promote your Licensed Application without prior written permission.
+
+5. RESTRICTIONS AND THIRD-PARTY COMPONENTS
+   5.1 You may not rent, lease, sublicense, or resell the Software or any
+       Machine License (except as expressly permitted for bundling Runtime
+       Redistributables in Section 3.3).
+   5.2 You may not bypass, spoof, disable, or tamper with the machine
+       fingerprinting, license verification, or session-management mechanisms
+       of the Software.
+   5.3 Third-Party Open-Source Software: The Software interacts with and
+       incorporates open-source components governed by their respective
+       licenses. Nothing in this Agreement restricts your rights under
+       applicable open-source licenses (including the GNU Lesser General Public
+       License v2.1 for dynamically linked system libraries such as libvips and
+       GStreamer), including the right to modify or reverse engineer solely to
+       the extent required to debug or relink such LGPL-licensed libraries.
+
+6. INTELLECTUAL PROPERTY
+   The Software is licensed, not sold. Licensor retains all right, title, and
+   interest in and to the Software, including all copyrights, trade secrets,
+   and other intellectual property rights not expressly granted herein.
+
+7. DISCLAIMER OF WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL
+   LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN
+   ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN
+   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+8. LIMITATION OF LIABILITY
+   TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, LICENSOR SHALL NOT BE
+   LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE
+   DAMAGES, OR ANY LOSS OF PROFITS, DATA, OR BUSINESS INTERRUPTION. LICENSOR'S
+   AGGREGATE LIABILITY UNDER THIS AGREEMENT SHALL NOT EXCEED THE AMOUNT PAID BY
+   YOU FOR THE APPLICABLE MACHINE LICENSE IN THE TWELVE (12) MONTHS PRECEDING
+   THE CLAIM (OR USD $50.00 IF ACQUIRED FREE OF CHARGE).
+
+9. TERMINATION
+   This Agreement is effective until terminated. Your rights under this
+   Agreement terminate automatically without notice if you fail to comply with
+   any of its terms. Upon termination, you must cease all use of the Software
+   and destroy all copies in your possession.
