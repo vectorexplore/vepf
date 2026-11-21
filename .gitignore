@@ -1,0 +1,8 @@
+bin/
+obj/
+runtime/
+VepfLicenseTool
+tools/UpdateSdkProps
+vepf_license.ini
+*.tar.gz
+*.pdb
