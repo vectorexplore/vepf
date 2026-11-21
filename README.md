@@ -93,7 +93,18 @@ For full details, see the [End User License Agreement](./LICENSE.txt), [Terms of
 
 ## Getting Started
 
-Once installed and activated, you can create, build, and run WPF applications on Linux using standard `.NET` CLI workflows:
+### Try the Included Demo
+
+The extracted release archive includes a sample WPF application in the `demo` directory. You can build and launch it immediately from the extracted folder to verify your setup:
+
+```bash
+cd demo
+dotnet run
+```
+
+### Create or Run Your Own WPF Application
+
+Once installed, you can create, build, and run WPF applications on Linux using standard `.NET` CLI workflows:
 
 ```bash
 # Create a new WPF application
