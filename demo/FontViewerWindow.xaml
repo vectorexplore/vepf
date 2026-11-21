@@ -1,0 +1,57 @@
+<Window x:Class="VepfDemo.FontViewerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Linux Font Viewer" Height="800" Width="1060" FontFamily="Segoe UI">
+    <Grid Margin="5">
+        <ListBox x:Name="FontListBox" 
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 Background="WhiteSmoke">
+            
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border Padding="4" Margin="2" Background="White" CornerRadius="4">
+                        <StackPanel Orientation="Horizontal" >
+
+                            <TextBlock Text="{Binding Source}" 
+                                       Width="180"
+                                       VerticalAlignment="Center"
+                                       FontWeight="SemiBold"
+                                       Foreground="Gray"
+                                       Margin="0,0,10,0"
+                                       /> <!--TextTrimming="CharacterEllipsis"-->
+
+                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                
+                                <TextBlock Text="{Binding Source, StringFormat='Regular: {0} Abc 123'}"
+                                           FontFamily="{Binding}"
+                                           FontSize="14"
+                                           Foreground="Black"/>
+
+                                <TextBlock Text="{Binding Source, StringFormat='Bold: {0} Abc 123'}"
+                                           FontFamily="{Binding}"
+                                           FontSize="14"
+                                           FontWeight="Bold"
+                                           Foreground="DarkBlue"
+                                           Margin="10,0,0,0"/>
+
+                                <TextBlock Text="{Binding Source, StringFormat='Italic: {0} Abc 123'}"
+                                           FontFamily="{Binding}"
+                                           FontSize="14"
+                                           FontStyle="Italic"
+                                           Foreground="DarkGreen"
+                                           Margin="10,0,0,0"/>
+                            </StackPanel> 
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+    </Grid>
+</Window>

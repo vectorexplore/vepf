@@ -1,0 +1,107 @@
+<Window x:Class="VepfDemo.ControlsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Modern Control UI Demo" Height="680" Width="450"
+        xmlns:colorpicker="clr-namespace:ColorPickerLib.Controls;assembly=ColorPickerLib"
+        Background="#F4F7F9"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="Segoe UI">
+
+    <Window.Resources>
+        <!-- Simple style to make all buttons look consistent -->
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#3F51B5"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Border Margin="20" Background="White" CornerRadius="8">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="15" Direction="270" ShadowDepth="2" Opacity="0.1"/>
+        </Border.Effect>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="25">
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                    <TextBlock x:Name="tbDemo" Text="DemoText" FontSize="22" Foreground="#2C3E50" />
+
+                    <Button Content="Color Picker"  Width="120" Margin="10 0 0 0" Click="PickColor_Click"/> 
+                    
+                    <ToggleButton x:Name="ColorButton" Height="30" Margin="10 0 0 0" Content="Pick Color" />
+                </StackPanel>
+
+
+                <Popup IsOpen="{Binding IsChecked, ElementName=ColorButton}" 
+                    PlacementTarget="{Binding ElementName=ColorButton}"
+                    Placement="Bottom"
+                    StaysOpen="False"
+                    AllowsTransparency="True"
+                    PopupAnimation="Fade">
+                    
+                    <Border BorderBrush="LightGray" BorderThickness="1" Background="White" Padding="5">
+                        
+                        <colorpicker:ColorCanvas x:Name="MyColorCanvas" 
+                                                SelectedColorChanged="MyColorCanvas_SelectedColorChanged" />
+                        
+                    </Border>
+                </Popup>
+
+
+                <!-- Text Input Section -->
+                <TextBlock Text="User Credentials" FontWeight="Bold" Foreground="#7F8C8D" Margin="0,0,0,8" FontSize="11"/>
+                <TextBox x:Name="UserNameInput" Height="35" VerticalContentAlignment="Center" Margin="0,0,0,10"
+                         Tag="Username" BorderBrush="#DCDDE1" Padding="5,0"/>
+    
+                <PasswordBox Height="35" VerticalContentAlignment="Center" Margin="0,0,0,15" BorderBrush="#DCDDE1" Padding="5,0"/>
+
+                <!-- Selection Section -->
+                <TextBlock Text="Preferences" FontWeight="Bold" Foreground="#7F8C8D" Margin="0,10,0,8" FontSize="11"/>
+                <ComboBox Height="35" VerticalContentAlignment="Center" Margin="0,0,0,15">
+                    <ComboBoxItem Content="Development" IsSelected="True"/>
+                    <ComboBoxItem Content="Design"/>
+                    <ComboBoxItem Content="Marketing"/>
+                </ComboBox>
+
+                <DatePicker Height="35" Margin="0,0,0,15" VerticalContentAlignment="Center"/>
+
+                <!-- Options -->
+                <CheckBox Content="Enable Cloud Sync" IsChecked="True" Margin="0,5"/>
+                <CheckBox Content="Background Updates" Margin="0,5,0,15"/>
+
+                <Separator Margin="0,10" Background="#F1F2F6"/>
+
+                <!-- Value Sliders -->
+                <TextBlock Text="Performance Boost" FontWeight="Bold" Foreground="#7F8C8D" Margin="0,5" FontSize="11"/>
+                <Slider Minimum="0" Maximum="100" Value="75" TickFrequency="10" Margin="0,5"/>
+                <ProgressBar Height="10" Value="75" Foreground="#4CD137" Background="#F1F2F6" BorderThickness="0" Margin="0,5,0,20"/>
+
+                <!-- Radio Group -->
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                    <RadioButton Content="Standard Mode" IsChecked="True" Margin="0,0,20,0"/>
+                    <RadioButton Content="Pro Mode"/>
+                </StackPanel>
+
+                <!-- Actions -->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="Save Changes" Grid.Column="0" Height="40" Margin="0,0,5,0" Cursor="Hand" Click="Close_Click"/>
+                    <Button Content="Cancel" Grid.Column="1" Height="40" Margin="5,0,0,0" Background="#E74C3C" Cursor="Hand" Click="Close_Click"/>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+    </Border>
+</Window>

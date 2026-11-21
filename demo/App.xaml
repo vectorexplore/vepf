@@ -1,0 +1,54 @@
+﻿<Application x:Class="VepfDemo.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:VepfDemo"
+             StartupUri="MainWindow.xaml"
+             >
+
+    <!-- Fluent themes: uncomment ThemeMode AND comment out all dictionaries below -->
+    <!-- ThemeMode="Light" -->
+    <!-- ThemeMode="Dark" -->
+    <!-- ThemeMode="System" -->
+    <!-- ThemeMode="None" -->
+
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+
+                <!-- ===================================================== -->
+                <!-- Classic WPF built-in themes: enable ONE at a time    -->
+                <!-- ===================================================== -->
+
+                <!-- Classic -->
+                <!-- <ResourceDictionary Source="/PresentationFramework.Classic;component/themes/Classic.xaml"/> -->
+
+                <!-- Aero -->
+                <!-- <ResourceDictionary Source="/PresentationFramework.Aero;component/themes/Aero.NormalColor.xaml"/> -->
+
+                <!-- Aero2 -->
+                <!-- <ResourceDictionary Source="/PresentationFramework.Aero2;component/themes/Aero2.NormalColor.xaml"/> -->
+
+                <!-- AeroLite -->
+                <!-- <ResourceDictionary Source="/PresentationFramework.AeroLite;component/themes/AeroLite.NormalColor.xaml"/> -->
+
+                <!-- Luna Blue -->
+                <!-- <ResourceDictionary Source="/PresentationFramework.Luna;component/themes/Luna.NormalColor.xaml"/> -->
+
+                <!-- Luna Silver -->
+                <!-- <ResourceDictionary Source="/PresentationFramework.Luna;component/themes/Luna.Metallic.xaml"/> -->
+
+                <!-- Luna Olive -->
+                <!-- <ResourceDictionary Source="/PresentationFramework.Luna;component/themes/Luna.Homestead.xaml"/> -->
+
+                <!-- Royale -->
+                <!-- <ResourceDictionary Source="/PresentationFramework.Royale;component/themes/Royale.NormalColor.xaml"/> -->
+
+                <!-- Fluent -->
+                <!-- <ResourceDictionary Source="/PresentationFramework.Fluent;component/themes/Fluent.xaml"/> -->
+
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,30 @@
+<Window x:Class="VepfDemo.ColorPickerDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:colorpicker="clr-namespace:ColorPickerLib.Controls;assembly=ColorPickerLib"
+        Title="Color Picker" Height="450" Width="400"
+        WindowStartupLocation="CenterOwner"
+        ShowInTaskbar="False">
+    
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/ColorPickerLib;component/Themes/LightBrushs.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <colorpicker:ColorCanvas x:Name="MyColorCanvas" Grid.Row="0" Margin="10" />
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+            <Button Content="OK" Width="80" Margin="0,0,10,0" Click="OkButton_Click" />
+            <Button Content="Cancel" Width="80" Click="CancelButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
