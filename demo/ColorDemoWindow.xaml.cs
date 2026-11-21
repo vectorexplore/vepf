@@ -40,7 +40,7 @@ namespace VepfDemo
             colorList.Sort((x, y) => string.Compare(x.Name, y.Name));
 
             // --- Dynamic Gradient Section ---
-            colorList.Add(new ColorItem { Name = "渐变演示如下", ColorBrush = CreateLinear(Colors.YellowGreen, Colors.DeepSkyBlue) });
+            colorList.Add(new ColorItem { Name = "Gradient Section", ColorBrush = CreateLinear(Colors.YellowGreen, Colors.DeepSkyBlue) });
 
             // Define some color pairs for the gradients
             var gradientSchemes = new[] {
