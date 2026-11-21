@@ -35,11 +35,12 @@ sudo apt-get install -y dotnet-sdk-10.0
 
 ### 1. Download and Extract VePF
 
-Download the latest Linux `x64` release archive from [www.vepf.net](https://www.vepf.net) and extract it:
+Download the latest Linux `x64` release archive (`vepf-10.0.12-linux-x64.tar.gz`) and its `.sha256` checksum from the repository's **Releases** page (also linked at [www.vepf.net](https://www.vepf.net)), then verify and extract it:
 
 ```bash
-tar -xzf vepf-linux-x64.tar.gz
-cd vepf-linux-x64
+sha256sum -c vepf-10.0.12-linux-x64.tar.gz.sha256
+tar -xzf vepf-10.0.12-linux-x64.tar.gz
+cd vepf-10.0.12-linux-x64
 ```
 
 ### 2. Install System Dependencies

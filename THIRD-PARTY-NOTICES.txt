@@ -2,9 +2,9 @@
 VEPF — THIRD-PARTY SOFTWARE NOTICES AND LICENSES
 ================================================================================
 
-VePF incorporates or dynamically links against the following third-party
-open-source software components. Each component is governed by its respective
-license terms set forth below.
+VePF incorporates, statically links, or dynamically links against the following
+third-party open-source software components. Each component is governed by its
+respective license terms set forth below.
 
 --------------------------------------------------------------------------------
 1. .NET Runtime & Windows Presentation Foundation (WPF) Reference Components
@@ -14,26 +14,54 @@ Website:   https://github.com/dotnet/wpf and https://github.com/dotnet/runtime
 Copyright: Copyright (c) .NET Foundation and Contributors
 License:   MIT License
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+--------------------------------------------------------------------------------
+2. Statically Linked & Header-Only Libraries (Bundled in libmilcorez.so)
+--------------------------------------------------------------------------------
+The following libraries are statically linked or compiled as header-only
+dependencies into the VePF native runtime (libmilcorez.so):
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+  * SDL3 (Simple DirectMedia Layer)
+    Website:   https://www.libsdl.org
+    Copyright: Copyright (C) 1997-2026 Sam Lantinga <slouken@libsdl.org>
+    License:   zlib License (see Section 5.2)
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+  * DirectXMath
+    Website:   https://github.com/microsoft/DirectXMath
+    Copyright: Copyright (c) Microsoft Corporation
+    License:   MIT License (see Section 5.1)
+
+  * Vulkan Memory Allocator (VMA)
+    Website:   https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator
+    Copyright: Copyright (c) 2017-2026 Advanced Micro Devices, Inc.
+    License:   MIT License (see Section 5.1)
+
+  * magic_enum
+    Website:   https://github.com/Neargye/magic_enum
+    Copyright: Copyright (c) 2019-2026 Daniil Goncharov
+    License:   MIT License (see Section 5.1)
+
+  * glm (OpenGL Mathematics)
+    Website:   https://github.com/g-truc/glm
+    Copyright: Copyright (c) 2005 - G-Truc Creation
+    License:   The Happy Bunny License / MIT License (see Section 5.1)
+
+  * Quill (Asynchronous Low-Latency Logging Library)
+    Website:   https://github.com/odygrd/quill
+    Copyright: Copyright (c) 2020-2026 Odysseas Georgoudis
+    License:   MIT License (see Section 5.1)
+
+  * inih (INI Not Invented Here)
+    Website:   https://github.com/benhoyt/inih
+    Copyright: Copyright (c) 2009, Ben Hoyt
+    License:   BSD 3-Clause License (see Section 5.3)
+
+  * xxHash
+    Website:   https://github.com/Cyan4973/xxHash
+    Copyright: Copyright (c) 2012-2021 Yann Collet
+    License:   BSD 2-Clause License (see Section 5.4)
 
 --------------------------------------------------------------------------------
-2. Dynamically Linked Linux System Libraries
+3. Dynamically Linked Linux System Libraries
 --------------------------------------------------------------------------------
 The VePF native runtime (libmilcorez.so) dynamically links at runtime against
 standard system libraries installed on the host Linux distribution via
@@ -52,6 +80,18 @@ remain licensed under their respective upstream open-source licenses:
     Website: https://imagemagick.org
     License: ImageMagick License (Apache-2.0 compatible)
 
+  * FreeType (Font Rendering Library)
+    Website: https://freetype.org
+    License: FreeType License (FTL) / GNU General Public License v2.0 or later
+
+  * OpenSSL (Cryptography and SSL/TLS Toolkit)
+    Website: https://www.openssl.org
+    License: Apache License 2.0 (Apache-2.0)
+
+  * giflib (GIF Image Decoding Library)
+    Website: https://giflib.sourceforge.net
+    License: MIT License
+
   * Vulkan Loader (libvulkan) & Mesa 3D / Lavapipe (llvmpipe)
     Website: https://www.khronos.org/vulkan / https://www.mesa3d.org
     License: Apache-2.0 / MIT License
@@ -61,7 +101,7 @@ remain licensed under their respective upstream open-source licenses:
     License: MIT License
 
 --------------------------------------------------------------------------------
-3. GNU Lesser General Public License (LGPL) v2.1 Compliance Notice
+4. GNU Lesser General Public License (LGPL) v2.1 Compliance Notice
 --------------------------------------------------------------------------------
 In accordance with the GNU Lesser General Public License, Version 2.1
 (LGPL-2.1), dynamically linked libraries such as libvips and GStreamer are
@@ -72,6 +112,98 @@ target Linux host independently of VePF.
 Full text of the GNU Lesser General Public License v2.1 is available on most
 Linux systems at /usr/share/common-licenses/LGPL-2.1 or online at:
 https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+
+--------------------------------------------------------------------------------
+5. Full License Texts for Bundled & Statically Linked Components
+--------------------------------------------------------------------------------
+
+5.1 MIT License
+---------------
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+5.2 zlib License (SDL3)
+-----------------------
+This software is provided 'as-is', without any express or implied
+warranty. In no event will the authors be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not
+   claim that you wrote the original software. If you use this software
+   in a product, an acknowledgment in the product documentation would be
+   appreciated but is not required.
+2. Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.
+
+5.3 BSD 3-Clause License (inih)
+-------------------------------
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+5.4 BSD 2-Clause License (xxHash)
+---------------------------------
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 End of Third-Party Notices
